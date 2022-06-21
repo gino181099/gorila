@@ -6,6 +6,7 @@ const Reserve = () => {
         .reserve {
           display: flex;
           padding: 100px 50px;
+          justify-content: space-between;
         }
         .reserve .title__reserve {
           font-size: 64px;
