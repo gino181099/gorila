@@ -2,7 +2,9 @@
 import Head from "next/head";
 
 import About from "../components/about";
+import Activities from "../components/activities";
 import Heading from "../components/home/heading";
+import Instagram from "../components/instagram";
 import Menu from "../components/menu";
 import Reserve from "../components/reserve";
 import Rooms from "../components/rooms";
@@ -39,6 +41,8 @@ Amplias áreas comunes, con jardín, piscina, metegol y ping pong. Bar ,Wifi gra
       <Reserve />
       <About />
       <Rooms />
+      <Activities />
+      <Instagram />
     </main>
   );
 }
