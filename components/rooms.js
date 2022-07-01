@@ -5,28 +5,40 @@ const Rooms = () => {
   const [privateRoom, setPrivateRoom] = useState(1);
   const [mixedRoom, setMixedRoom] = useState(1);
   const nextPrivate = () => {
-    privateRoom == 4 ? setPrivateRoom(1) : setPrivateRoom(privateRoom + 1);
+    privateRoom == 3 ? setPrivateRoom(1) : setPrivateRoom(privateRoom + 1);
   };
   const prevPrivate = () => {
-    privateRoom == 1 ? setPrivateRoom(4) : setPrivateRoom(privateRoom - 1);
+    privateRoom == 1 ? setPrivateRoom(3) : setPrivateRoom(privateRoom - 1);
   };
   const nextMixed = () => {
-    mixedRoom == 4 ? setMixedRoom(1) : setMixedRoom(mixedRoom + 1);
+    mixedRoom == 5 ? setMixedRoom(1) : setMixedRoom(mixedRoom + 1);
   };
   const prevMixed = () => {
-    mixedRoom == 1 ? setMixedRoom(4) : setMixedRoom(mixedRoom - 1);
+    mixedRoom == 1 ? setMixedRoom(5) : setMixedRoom(mixedRoom - 1);
   };
   let privateText = {
-    1: "1Situated in an exceptional setting, the Domaine du Gouverneur presents 53 spacious and cosy rooms and suites, with view over the golf area and its gorgeous landscapes.",
-    2: "2Situated in an exceptional setting, the Domaine du Gouverneur presents 53 spacious and cosy rooms and suites, with view over the golf area and its gorgeous landscapes.",
-    3: "3Situated in an exceptional setting, the Domaine du Gouverneur presents 53 spacious and cosy rooms and suites, with view over the golf area and its gorgeous landscapes.",
-    4: "4Situated in an exceptional setting, the Domaine du Gouverneur presents 53 spacious and cosy rooms and suites, with view over the golf area and its gorgeous landscapes.",
+    1: "Disponible desde octubre 2022. Cama doble y 1 cucheta con calefacción central, aire acondicionado, toallas incluidas, secador de pelo, placard y desayuno incluido",
+    2: "Cama doble y 1 cucheta con calefacción central, aire acondicionado, toallas incluidas, secador de pelo, placard y desayuno incluido",
+    3: "Cuenta con 3 Cuchetas (litera, camarote), 2 camas individuales, Baño privado (separado ducha y baño), Aire Acondicionado frio/calor, Desayuno incluído, Secador de pelo, Vestidor y Lockers individuales",
   };
   let privateTitle = {
-    1: "1PARA 4 PERSONAS",
-    2: "2PARA 4 PERSONAS",
-    3: "3PARA 4 PERSONAS",
-    4: "4PARA 4 PERSONAS",
+    1: "Para 4 personas Máximo C/baño privado",
+    2: "Para 4 personas Máximo C/baño compartido",
+    3: "Habitación FEMENINA para 6 C/baño privado",
+  };
+  let mixedText = {
+    1: "Camas cuchetas, Baño compartido, Calefacción central, Aire Acondicionado, Lockers individuales y Desayuno incluído.",
+    2: "Camas cuchetas, Baño compartido, Calefacción central, Aire Acondicionado, Lockers individuales y Desayuno incluído.",
+    3: "Camas cuchetas, Baño privado, Balcon, Calefacción central, Aire Acondicionado, Lockers individuales y Desayuno incluído.",
+    4: "2 cuchetas, Baño compartido, Calefacción central, Aire Acondicionado, Lockers individuales y Desayuno incluído.",
+    5: "2 cuchetas, Baño compartido, Calefacción central, Aire Acondicionado, Lockers individuales y Desayuno incluído.",
+  };
+  let mixedTitle = {
+    1: "Para 8 personas Máximo C/baño compartido",
+    2: "Para 6 personas Máximo C/baño compartido",
+    3: "Para 8 personas Máximo C/baño privado",
+    4: "Para 4 personas Máximo C/baño compartido",
+    5: "Para 4 personas Máximo C/baño compartido",
   };
   return (
     <section className="rooms">
@@ -39,7 +51,7 @@ const Rooms = () => {
           </h2>
           <div className="image__carousel__room">
             <Image
-              src="/1.webp"
+              src="/private1.webp"
               alt="Picture of the author"
               layout="fill"
               // height={500}
@@ -55,7 +67,7 @@ const Rooms = () => {
               }}
             />
             <Image
-              src="/2.webp"
+              src="/private2.webp"
               alt="Picture of the author"
               layout="fill"
               // height={500}
@@ -71,7 +83,7 @@ const Rooms = () => {
               }}
             />
             <Image
-              src="/3.webp"
+              src="/private3.webp"
               alt="Picture of the author"
               layout="fill"
               // height={500}
@@ -84,22 +96,6 @@ const Rooms = () => {
                 height: "100%",
                 width: "100%",
                 opacity: `${privateRoom == 3 ? 1 : 0}`,
-              }}
-            />
-            <Image
-              src="/2.webp"
-              alt="Picture of the author"
-              layout="fill"
-              // height={500}
-              // width={500}
-              objectFit="cover"
-              style={{
-                top: "0",
-                left: "0",
-                position: "absolute",
-                height: "100%",
-                width: "100%",
-                opacity: `${privateRoom == 4 ? 1 : 0}`,
               }}
             />
           </div>
@@ -123,7 +119,7 @@ const Rooms = () => {
                 <line x1="5" y1="12" x2="9" y2="8" />
               </svg>
             </button>
-            <p>{privateRoom} / 4</p>
+            <p>{privateRoom} / 3</p>
             <button onClick={nextPrivate}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -148,7 +144,7 @@ const Rooms = () => {
         <div className="right__room">
           <div className="image__description__room">
             <Image
-              src="/1.webp"
+              src="/private1.webp"
               alt="Picture of the author"
               layout="fill"
               // height={500}
@@ -164,7 +160,7 @@ const Rooms = () => {
               }}
             />
             <Image
-              src="/2.webp"
+              src="/private2.webp"
               alt="Picture of the author"
               layout="fill"
               // height={500}
@@ -180,7 +176,7 @@ const Rooms = () => {
               }}
             />
             <Image
-              src="/3.webp"
+              src="/private3.webp"
               alt="Picture of the author"
               layout="fill"
               // height={500}
@@ -193,22 +189,6 @@ const Rooms = () => {
                 height: "100%",
                 width: "100%",
                 opacity: `${privateRoom == 3 ? 1 : 0}`,
-              }}
-            />
-            <Image
-              src="/2.webp"
-              alt="Picture of the author"
-              layout="fill"
-              // height={500}
-              // width={500}
-              objectFit="cover"
-              style={{
-                top: "0",
-                left: "0",
-                position: "absolute",
-                height: "100%",
-                width: "100%",
-                opacity: `${privateRoom == 4 ? 1 : 0}`,
               }}
             />
           </div>
@@ -225,7 +205,7 @@ const Rooms = () => {
         <div className="right__room">
           <div className="image__description__room">
             <Image
-              src="/1.webp"
+              src="/mixed1.webp"
               alt="Picture of the author"
               layout="fill"
               // height={500}
@@ -241,7 +221,7 @@ const Rooms = () => {
               }}
             />
             <Image
-              src="/2.webp"
+              src="/mixed2.webp"
               alt="Picture of the author"
               layout="fill"
               // height={500}
@@ -257,7 +237,7 @@ const Rooms = () => {
               }}
             />
             <Image
-              src="/3.webp"
+              src="/mixed3.webp"
               alt="Picture of the author"
               layout="fill"
               // height={500}
@@ -273,7 +253,7 @@ const Rooms = () => {
               }}
             />
             <Image
-              src="/2.webp"
+              src="/mixed4.webp"
               alt="Picture of the author"
               layout="fill"
               // height={500}
@@ -288,11 +268,27 @@ const Rooms = () => {
                 opacity: `${mixedRoom == 4 ? 1 : 0}`,
               }}
             />
+            <Image
+              src="/mixed5.webp"
+              alt="Picture of the author"
+              layout="fill"
+              // height={500}
+              // width={500}
+              objectFit="cover"
+              style={{
+                top: "0",
+                left: "0",
+                position: "absolute",
+                height: "100%",
+                width: "100%",
+                opacity: `${mixedRoom == 5 ? 1 : 0}`,
+              }}
+            />
           </div>
           <p>
-            <span className="description__span">{privateTitle[mixedRoom]}</span>
+            <span className="description__span">{mixedTitle[mixedRoom]}</span>
             <br />
-            {privateText[mixedRoom]}
+            {mixedText[mixedRoom]}
           </p>
         </div>
         <div className="left__room">
@@ -303,7 +299,7 @@ const Rooms = () => {
           </h2>
           <div className="image__carousel__room">
             <Image
-              src="/1.webp"
+              src="/mixed1.webp"
               alt="Picture of the author"
               layout="fill"
               // height={500}
@@ -319,7 +315,7 @@ const Rooms = () => {
               }}
             />
             <Image
-              src="/2.webp"
+              src="/mixed2.webp"
               alt="Picture of the author"
               layout="fill"
               // height={500}
@@ -335,7 +331,7 @@ const Rooms = () => {
               }}
             />
             <Image
-              src="/3.webp"
+              src="/mixed3.webp"
               alt="Picture of the author"
               layout="fill"
               // height={500}
@@ -351,7 +347,7 @@ const Rooms = () => {
               }}
             />
             <Image
-              src="/2.webp"
+              src="/mixed4.webp"
               alt="Picture of the author"
               layout="fill"
               // height={500}
@@ -364,6 +360,22 @@ const Rooms = () => {
                 height: "100%",
                 width: "100%",
                 opacity: `${mixedRoom == 4 ? 1 : 0}`,
+              }}
+            />
+            <Image
+              src="/mixed5.webp"
+              alt="Picture of the author"
+              layout="fill"
+              // height={500}
+              // width={500}
+              objectFit="cover"
+              style={{
+                top: "0",
+                left: "0",
+                position: "absolute",
+                height: "100%",
+                width: "100%",
+                opacity: `${mixedRoom == 5 ? 1 : 0}`,
               }}
             />
           </div>
@@ -387,7 +399,7 @@ const Rooms = () => {
                 <line x1="5" y1="12" x2="9" y2="8" />
               </svg>
             </button>
-            <p>{mixedRoom} / 4</p>
+            <p>{mixedRoom} / 5</p>
             <button onClick={nextMixed}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -451,7 +463,7 @@ const Rooms = () => {
           line-height: 100%;
         }
         p {
-          font-size: 24px;
+          font-size: 18px;
           line-height: 150%;
           padding: 0;
           padding-top: 50px;
@@ -478,7 +490,7 @@ const Rooms = () => {
         .arrows button svg {
           width: 100%;
           height: 100%;
-          transform: translateY(-12.5%);
+          transform: translateY(-25%);
         }
         .arrows p {
           padding: 0 10px;

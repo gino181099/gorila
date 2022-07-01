@@ -30,8 +30,8 @@ export default function Heading() {
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="icon icon-tabler icon-tabler-brand-whatsapp"
-              width="48"
-              height="48"
+              width="32"
+              height="32"
               viewBox="0 0 24 24"
               strokeWidth="1.5"
               stroke="#ffffff"
@@ -48,8 +48,8 @@ export default function Heading() {
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="icon icon-tabler icon-tabler-brand-instagram"
-              width="48"
-              height="48"
+              width="32"
+              height="32"
               viewBox="0 0 24 24"
               strokeWidth="1.5"
               stroke="#ffffff"
@@ -67,8 +67,8 @@ export default function Heading() {
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="icon icon-tabler icon-tabler-mail-forward"
-              width="48"
-              height="48"
+              width="32"
+              height="32"
               viewBox="0 0 24 24"
               strokeWidth="1.5"
               stroke="#ffffff"
@@ -106,7 +106,7 @@ export default function Heading() {
         }
         .about__content {
           color: white;
-          font-size: 32px;
+          font-size: 24px;
           position: relative;
           mix-blend-mode: difference;
           line-height: 105%;

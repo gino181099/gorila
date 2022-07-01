@@ -43,19 +43,19 @@ const About = () => {
         <ul>
           <li className="one active">
             <div className="line"></div>
-            <p>Quienes Somos</p>
+            <p>¿Quiénes Somos?</p>
           </li>
           <li className="two">
             <div className="line"></div>
-            <p>Que hacemos</p>
+            <p>¿Por qué elegirnos?</p>
           </li>
           <li className="three">
             <div className="line"></div>
-            <p>Que hacemos</p>
+            <p>Diversión asegurada</p>
           </li>
           <li className="four">
             <div className="line"></div>
-            <p>Que hacemos</p>
+            <p>Desayuno continental incluido</p>
           </li>
         </ul>
       </div>
@@ -63,61 +63,68 @@ const About = () => {
         <div className="mobile__block" id="one">
           <div className="image__block">
             <Image
-              src="/1.webp"
+              src="/frente.webp"
               alt="Picture of the author"
               width={700}
               height={500}
+              objectFit="cover"
             />
           </div>
           <p>
-            Trabajamos duro para poder ofrecerte la mejor estadía y ayudarte
-            para que dediques tu tiempo a disfrutar de Mendoza, sus hermosos
-            paisajes, gastronomía y su gente.
+            Gorilla Hostel fue creado por hermanos en el 2015 con el deseo de
+            ofrecer algo único:{" "}
+            <b>
+              Un hostel de diseño, excelente calidad y divertido para jóvenes
+              viajeros en la mejor zona de la Ciudad de Mendoza.
+            </b>
           </p>
         </div>
         <div className="mobile__block" id="two">
           <div className="image__block">
             <Image
-              src="/2.webp"
+              src="/coworking.webp"
               alt="Picture of the author"
               width={700}
               height={500}
+              objectFit="cover"
             />
           </div>
           <p>
-            Trabajamos duro para poder ofrecerte la mejor estadía y ayudarte
-            para que dediques tu tiempo a disfrutar de Mendoza, sus hermosos
-            paisajes, gastronomía y su gente.
+            Estamos en una increible ubicación cerca de todo lo lindo de
+            Mendoza! Además somos el único hostel de Mendoza ideal para nómades
+            digitales.
           </p>
         </div>
         <div className="mobile__block" id="three">
           <div className="image__block">
             <Image
-              src="/3.webp"
+              src="/bar.webp"
               alt="Picture of the author"
               width={700}
               height={500}
+              objectFit="cover"
             />
           </div>
           <p>
-            Trabajamos duro para poder ofrecerte la mejor estadía y ayudarte
-            para que dediques tu tiempo a disfrutar de Mendoza, sus hermosos
-            paisajes, gastronomía y su gente.
+            Tenemos un BAR exclusivo para nuestros pasajeros que garantiza
+            diversión todas las noches. Además, te ayudamos a reservar las
+            mejores excursiones, salidas, eventos, fiestas.
           </p>
         </div>
         <div className="mobile__block" id="four">
           <div className="image__block">
             <Image
-              src="/1.webp"
+              src="/desayuno.webp"
               alt="Picture of the author"
               width={700}
               height={500}
+              objectFit="cover"
             />
           </div>
           <p>
-            Trabajamos duro para poder ofrecerte la mejor estadía y ayudarte
-            para que dediques tu tiempo a disfrutar de Mendoza, sus hermosos
-            paisajes, gastronomía y su gente.
+            Nuestra tarifa incluye desayuno! El mismo cuenta de medialunas
+            caseras recién horneadas, pan lactal, manteca, dulce de leche,
+            mermeladas, frutas de estación, leche, cereales, cafe, te, jugos.
           </p>
         </div>
       </div>
@@ -126,7 +133,7 @@ const About = () => {
         .about {
           display: flex;
           color: white;
-          background: #0c2028;
+          background: #151515;
           justify-content: space-between;
         }
         .fixed {
@@ -187,14 +194,30 @@ const About = () => {
           top: 50%;
           transform: translateY(-50%);
           color: white;
-          font-size: 28px;
+          font-size: 18px;
           font-weight: 400;
           max-width: 650px;
           width: 650px;
-          line-height: 120%;
+          line-height: 150%;
           padding: 50px;
-          background-color: #0007;
-          right: 100px;
+          background-color: #000a;
+          left: -50px;
+          opacity: 0;
+          transform: translateY(-20%);
+          transition: 1s;
+        }
+        #two p,
+        #four p {
+          right: 0;
+          left: unset;
+        }
+        #two .image__block,
+        #four .image__block {
+          margin-right: 50px;
+        }
+        .mobile__block.show p {
+          opacity: 1;
+          transform: translateY(-50%);
         }
       `}</style>
     </section>

@@ -3,6 +3,8 @@ import Head from "next/head";
 
 import About from "../components/about";
 import Activities from "../components/activities";
+import Arrive from "../components/arrive";
+import Contacto from "../components/contact";
 import Heading from "../components/home/heading";
 import Instagram from "../components/instagram";
 import Menu from "../components/menu";
@@ -18,6 +20,7 @@ export default function Home() {
         <title>
           Hostel en Mendoza-Para jovenes viajeros- Hostel Gorilla Mendoza
         </title>
+        <link rel="shortcut icon" href="/icon.png" />
         <meta
           name="description"
           content="Hostel Gorilla es ideal para jóvenes, ubicado en el corazón de la ciudad de Mendoza, a 2 cuadras de Arístides y 5 del Parque San Martin. 
@@ -43,6 +46,8 @@ Amplias áreas comunes, con jardín, piscina, metegol y ping pong. Bar ,Wifi gra
       <Rooms />
       <Activities />
       <Instagram />
+      <Arrive />
+      <Contacto />
     </main>
   );
 }

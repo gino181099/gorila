@@ -35,13 +35,13 @@ const Menu = () => {
             <a className="reserve">Reservar</a>
           </li>
           <li>
-            <a>Nosotros</a>
+            <a>Actividades</a>
           </li>
           <li>
             <a>Habitaciones</a>
           </li>
           <li>
-            <a>Cómo llegar</a>
+            <a>Blog</a>
           </li>
           <li>
             <a>Contacto</a>
@@ -67,7 +67,7 @@ const Menu = () => {
         .menu {
           display: flex;
           justify-content: space-between;
-          padding: 25px;
+          padding: 10px 25px;
           max-width: 1440px;
           margin: 0 auto;
           align-items: center;
@@ -82,6 +82,7 @@ const Menu = () => {
         .reserve {
           background: #40b9ed;
           padding: 5px 10px;
+          border-radius: 5px;
         }
       `}</style>
     </div>
