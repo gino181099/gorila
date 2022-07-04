@@ -6,12 +6,15 @@ export default function Heading() {
     <section>
       <Slider />
       <div className="content">
-        <Image
-          src="/gorila.webp"
-          alt="Picture of the author"
-          width={225}
-          height={216}
-        />
+        <div className="logo__heading">
+          <Image
+            src="/gorila.webp"
+            alt="Gorila Hostel Logo"
+            layout="fill"
+            objectFit="cover"
+          />
+        </div>
+
         <div className="title">
           <h2>
             gori<span>ll</span>a
@@ -158,6 +161,44 @@ export default function Heading() {
         }
         .title span {
           color: #45add9;
+        }
+        .logo__heading {
+          height: 216px;
+          width: 225px;
+          overflow: hidden;
+          position: relative;
+        }
+        @media (max-width: 650px) {
+          .logo__heading {
+            height: 162px;
+            width: 168px;
+          }
+          .title h2 {
+            font-size: 1em;
+          }
+          .title p {
+            font-size: 48px;
+            line-height: 100%;
+          }
+          .about__content {
+            font-size: 18px;
+          }
+        }
+        @media (max-width: 320px) {
+          .logo__heading {
+            height: 112px;
+            width: 112px;
+          }
+          .title h2 {
+            font-size: 0.75em;
+          }
+          .title p {
+            font-size: 32px;
+            line-height: 100%;
+          }
+          .about__content {
+            font-size: 14px;
+          }
         }
       `}</style>
     </section>

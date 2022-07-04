@@ -1,4 +1,4 @@
-import React from "react";
+import Image from "next/image";
 
 const Arrive = () => {
   return (
@@ -9,6 +9,65 @@ const Arrive = () => {
           <br />
           LLEGAR AL HOSTEL
         </h2>
+      </div>
+      <div className="content">
+        <div className="text__content">
+          <h3>Desde el aeropuerto internacional El Plumerillo</h3>
+          <p>
+            Puede Ir desde el Aeropuerto de Mendoza al centro en Taxi / Uber /
+            Cabify
+          </p>
+          <h4>En bus</h4>
+          <p>
+            El colectivo Línea 680 es recomendable de tomar si viajas solo o en
+            pareja, ya que además de la ventaja de ser más barato que las otras
+            opciones, también deberás cargar tus propias valijas durante todo el
+            trayecto, y finalmente caminar hasta el hostel.
+          </p>
+        </div>
+        <div className="image__content">
+          <Image
+            src="/2.webp"
+            alt="Picture of the author"
+            // layout="fill"
+            width={500}
+            height={438}
+            objectFit="cover"
+          />
+        </div>
+      </div>
+      <div className="content">
+        <div className="image__content">
+          <Image
+            src="/1.webp"
+            alt="Picture of the author"
+            // layout="fill"
+            width={500}
+            height={675}
+            objectFit="cover"
+          />
+        </div>
+        <div className="text__content">
+          <h3>Desde la terminal Ómnibus de Mendoza</h3>
+          <p>
+            Puede Ir desde la terminal de Mendoza al centro en Taxi / Uber /
+            Cabify
+          </p>
+          <h4>En bus</h4>
+          <p>
+            Podés tomarte : 201 o 200 frente a la terminal, en el Retorno ACA,
+            parada: Arturo González y Elpidio González (Guaymallén, Mendoza)
+            Parada: Av. Emilio Civit y Coronel Rodriguez caminar por Rodriguez 2
+            cuadras y girar a la izquierda por Martin Zapata 50 mts
+          </p>
+          <h4>Caminando</h4>
+          <p>
+            La terminal está a 2,5km del hostel, y es todo recto: Vas por calle
+            Alem, luego cambia de nombre al cruzar Av. San Martín a Montevideo y
+            una vez que cruzás Belgrano cambia a Martín Zapata. ( es la misma
+            calle que cambia de nombre, Mendoza es así )
+          </p>
+        </div>
       </div>
       <style jsx>{`
         .title__arrive h2 {
@@ -25,7 +84,37 @@ const Arrive = () => {
           padding-bottom: 10px;
         }
         .arrive {
-          padding: 100px 0;
+          padding: 100px 0 0;
+        }
+        h3 {
+          font-size: 36px;
+          max-width: 500px;
+          padding-bottom: 25px;
+        }
+        h4 {
+          padding-top: 25px;
+          padding-bottom: 10px;
+          max-width: 500px;
+          font-size: 20px;
+        }
+
+        .content {
+          display: flex;
+          padding: 100px;
+          justify-content: space-between;
+          flex-wrap: wrap;
+        }
+        .content p {
+          font-size: 20px;
+          max-width: 500px;
+        }
+        .image__content {
+          max-width: 500px;
+          width: 500px;
+          height: 300px;
+        }
+        .image__content img {
+          height: 100%;
         }
       `}</style>
     </section>

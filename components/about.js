@@ -219,6 +219,40 @@ const About = () => {
           opacity: 1;
           transform: translateY(-50%);
         }
+        @media (max-width: 1250px) {
+          .fixed {
+            display: none;
+          }
+          .mobile__block {
+            margin: auto;
+          }
+          .about {
+            justify-content: center;
+          }
+        }
+        @media (max-width: 900px) {
+          #two .image__block,
+          #four .image__block {
+            margin-right: 0px;
+          }
+          .mobile__block p {
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 14px;
+            padding: 50px;
+            background-color: #000a;
+            left: 0%;
+            right: 0%;
+            width: 100%;
+            max-width: 100%;
+          }
+        }
+        @media (max-width: 400px) {
+          .mobile__block p {
+            padding: 25px;
+            font-size: 12px;
+          }
+        }
       `}</style>
     </section>
   );

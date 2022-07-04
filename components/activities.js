@@ -1,11 +1,6 @@
 import Image from "next/image";
-import { useState } from "react";
 
 const Activities = () => {
-  const [show, setShow] = useState(false);
-  const showMore = () => {
-    setShow(!show);
-  };
   return (
     <section className="activities">
       <div className="actitivities__title">
@@ -15,132 +10,35 @@ const Activities = () => {
           ACTIVIDADES
         </h2>
       </div>
-      <div className="activities__container">
-        <div className="block">
+      <div className="content">
+        <p>
+          ¡En gorilla Hostel puedes planear tu estadía y reservar tours con
+          nosotros! Tenemos actividades de todos tipo incluyendo tours por la
+          provincia, tours de vino y muchas más experiencias.{" "}
+          <a>Ver Actividades</a>
+        </p>
+        <div className="img__content">
           <Image
             src="/3.webp"
             alt="Picture of the author"
             layout="fill"
             objectFit="cover"
-            style={{
-              top: "0",
-              left: "0",
-              position: "absolute",
-              height: "100%",
-              width: "100%",
-              opacity: 1,
-              filter: "brightness(0.5)",
-            }}
           />
-          <div className="title__block">TOURS DE VINO</div>
-          <div className="cards__block">
-            <div className="card">
-              <Image
-                src="/2.webp"
-                alt="Picture of the author"
-                layout="fill"
-                objectFit="cover"
-                style={{
-                  top: "0",
-                  left: "0",
-                  position: "absolute",
-                  height: "100%",
-                  width: "100%",
-                  opacity: 1,
-                }}
-              />
-            </div>
-            <div className="card">
-              <Image
-                src="/1.webp"
-                alt="Picture of the author"
-                layout="fill"
-                objectFit="cover"
-                style={{
-                  top: "0",
-                  left: "0",
-                  position: "absolute",
-                  height: "100%",
-                  width: "100%",
-                  opacity: 1,
-                }}
-              />
-            </div>
-          </div>
         </div>
-        {!show ? (
-          ""
-        ) : (
-          <div className="block">
-            <Image
-              src="/1.webp"
-              alt="Picture of the author"
-              layout="fill"
-              objectFit="cover"
-              style={{
-                top: "0",
-                left: "0",
-                position: "absolute",
-                height: "100%",
-                width: "100%",
-                opacity: 1,
-                filter: "brightness(0.5)",
-              }}
-            />
-            <div className="cards__block">
-              <div className="card">
-                <Image
-                  src="/3.webp"
-                  alt="Picture of the author"
-                  layout="fill"
-                  objectFit="cover"
-                  style={{
-                    top: "0",
-                    left: "0",
-                    position: "absolute",
-                    height: "100%",
-                    width: "100%",
-                    opacity: 1,
-                  }}
-                />
-              </div>
-              <div className="card">
-                <Image
-                  src="/2.webp"
-                  alt="Picture of the author"
-                  layout="fill"
-                  objectFit="cover"
-                  style={{
-                    top: "0",
-                    left: "0",
-                    position: "absolute",
-                    height: "100%",
-                    width: "100%",
-                    opacity: 1,
-                  }}
-                />
-              </div>
-            </div>
-            <div className="title__block">ACTIVIDADES</div>
-          </div>
-        )}
-
-        <button className="more" onClick={showMore}>
-          Ver {!show ? "más" : "menos"}
-        </button>
       </div>
       <style jsx>{`
+        .activities {
+          background-color: #151515;
+        }
         .actitivities__title {
           padding: 10px 0;
           text-align: center;
           color: white;
-          background-color: #151515;
         }
         .actitivities__title h2 {
           font-size: 64px;
           font-weight: 300;
           text-align: center;
-          padding-bottom: 50px;
           line-height: 100%;
         }
         .actitivities__title span {
@@ -150,50 +48,30 @@ const Activities = () => {
           line-height: 100%;
           padding-bottom: 10px;
         }
-        .activities__container {
-          position: relative;
-        }
-        .block {
-          padding: 100px;
+        .content {
           display: flex;
-          flex-wrap: wrap;
-          align-items: center;
-          background-color: black;
-          color: white;
           justify-content: space-between;
-          position: relative;
-        }
-        .cards__block {
-          display: flex;
-          gap: 25px;
+          padding: 0 100px 0;
+          color: white;
+          align-items: center;
           flex-wrap: wrap;
         }
-        .cards__block .card {
-          width: 400px;
-          max-width: 400px;
+        .img__content {
+          max-width: 500px;
+          width: 500px;
           height: 500px;
           position: relative;
-          display: flex;
-          flex-wrap: wrap;
-          overflow: hidden;
+          margin: 100px auto;
         }
-        .title__block {
-          font-size: 48px;
-          max-width: 300px;
+        .content p {
+          max-width: 500px;
+          width: 500px;
+          font-size: 28px;
+          margin: 100px auto;
           font-weight: 300;
-          position: relative;
         }
-        .more {
-          color: white;
-          border: none;
-          outline: none;
-          background: transparent;
-          font-size: 24px;
-          position: absolute;
-          bottom: 0;
-          left: 50%;
-          transform: translateX(-50%);
-          cursor: pointer;
+        .content a {
+          color: #40b9ed;
         }
       `}</style>
     </section>
