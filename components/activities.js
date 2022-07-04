@@ -19,7 +19,7 @@ const Activities = () => {
         </p>
         <div className="img__content">
           <Image
-            src="/3.webp"
+            src="/activities.jpg"
             alt="Picture of the author"
             layout="fill"
             objectFit="cover"

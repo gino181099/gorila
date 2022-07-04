@@ -54,15 +54,8 @@ const Rooms = () => {
               src="/private1.webp"
               alt="Picture of the author"
               layout="fill"
-              // height={500}
-              // width={500}
               objectFit="cover"
               style={{
-                top: "0",
-                left: "0",
-                position: "absolute",
-                height: "100%",
-                width: "100%",
                 opacity: `${privateRoom == 1 ? 1 : 0}`,
               }}
             />
@@ -70,15 +63,8 @@ const Rooms = () => {
               src="/private2.webp"
               alt="Picture of the author"
               layout="fill"
-              // height={500}
-              // width={500}
               objectFit="cover"
               style={{
-                top: "0",
-                left: "0",
-                position: "absolute",
-                height: "100%",
-                width: "100%",
                 opacity: `${privateRoom == 2 ? 1 : 0}`,
               }}
             />
@@ -86,15 +72,8 @@ const Rooms = () => {
               src="/private3.webp"
               alt="Picture of the author"
               layout="fill"
-              // height={500}
-              // width={500}
               objectFit="cover"
               style={{
-                top: "0",
-                left: "0",
-                position: "absolute",
-                height: "100%",
-                width: "100%",
                 opacity: `${privateRoom == 3 ? 1 : 0}`,
               }}
             />
@@ -147,15 +126,8 @@ const Rooms = () => {
               src="/private1.webp"
               alt="Picture of the author"
               layout="fill"
-              // height={500}
-              // width={500}
               objectFit="cover"
               style={{
-                top: "0",
-                left: "0",
-                position: "absolute",
-                height: "100%",
-                width: "100%",
                 opacity: `${privateRoom == 1 ? 1 : 0}`,
               }}
             />
@@ -163,15 +135,8 @@ const Rooms = () => {
               src="/private2.webp"
               alt="Picture of the author"
               layout="fill"
-              // height={500}
-              // width={500}
               objectFit="cover"
               style={{
-                top: "0",
-                left: "0",
-                position: "absolute",
-                height: "100%",
-                width: "100%",
                 opacity: `${privateRoom == 2 ? 1 : 0}`,
               }}
             />
@@ -179,15 +144,8 @@ const Rooms = () => {
               src="/private3.webp"
               alt="Picture of the author"
               layout="fill"
-              // height={500}
-              // width={500}
               objectFit="cover"
               style={{
-                top: "0",
-                left: "0",
-                position: "absolute",
-                height: "100%",
-                width: "100%",
                 opacity: `${privateRoom == 3 ? 1 : 0}`,
               }}
             />
@@ -208,15 +166,8 @@ const Rooms = () => {
               src="/mixed1.webp"
               alt="Picture of the author"
               layout="fill"
-              // height={500}
-              // width={500}
               objectFit="cover"
               style={{
-                top: "0",
-                left: "0",
-                position: "absolute",
-                height: "100%",
-                width: "100%",
                 opacity: `${mixedRoom == 1 ? 1 : 0}`,
               }}
             />
@@ -224,15 +175,8 @@ const Rooms = () => {
               src="/mixed2.webp"
               alt="Picture of the author"
               layout="fill"
-              // height={500}
-              // width={500}
               objectFit="cover"
               style={{
-                top: "0",
-                left: "0",
-                position: "absolute",
-                height: "100%",
-                width: "100%",
                 opacity: `${mixedRoom == 2 ? 1 : 0}`,
               }}
             />
@@ -240,15 +184,8 @@ const Rooms = () => {
               src="/mixed3.webp"
               alt="Picture of the author"
               layout="fill"
-              // height={500}
-              // width={500}
               objectFit="cover"
               style={{
-                top: "0",
-                left: "0",
-                position: "absolute",
-                height: "100%",
-                width: "100%",
                 opacity: `${mixedRoom == 3 ? 1 : 0}`,
               }}
             />
@@ -256,15 +193,8 @@ const Rooms = () => {
               src="/mixed4.webp"
               alt="Picture of the author"
               layout="fill"
-              // height={500}
-              // width={500}
               objectFit="cover"
               style={{
-                top: "0",
-                left: "0",
-                position: "absolute",
-                height: "100%",
-                width: "100%",
                 opacity: `${mixedRoom == 4 ? 1 : 0}`,
               }}
             />
@@ -272,15 +202,8 @@ const Rooms = () => {
               src="/mixed5.webp"
               alt="Picture of the author"
               layout="fill"
-              // height={500}
-              // width={500}
               objectFit="cover"
               style={{
-                top: "0",
-                left: "0",
-                position: "absolute",
-                height: "100%",
-                width: "100%",
                 opacity: `${mixedRoom == 5 ? 1 : 0}`,
               }}
             />
@@ -302,15 +225,8 @@ const Rooms = () => {
               src="/mixed1.webp"
               alt="Picture of the author"
               layout="fill"
-              // height={500}
-              // width={500}
               objectFit="cover"
               style={{
-                top: "0",
-                left: "0",
-                position: "absolute",
-                height: "100%",
-                width: "100%",
                 opacity: `${mixedRoom == 1 ? 1 : 0}`,
               }}
             />
@@ -318,15 +234,8 @@ const Rooms = () => {
               src="/mixed2.webp"
               alt="Picture of the author"
               layout="fill"
-              // height={500}
-              // width={500}
               objectFit="cover"
               style={{
-                top: "0",
-                left: "0",
-                position: "absolute",
-                height: "100%",
-                width: "100%",
                 opacity: `${mixedRoom == 2 ? 1 : 0}`,
               }}
             />
@@ -334,15 +243,8 @@ const Rooms = () => {
               src="/mixed3.webp"
               alt="Picture of the author"
               layout="fill"
-              // height={500}
-              // width={500}
               objectFit="cover"
               style={{
-                top: "0",
-                left: "0",
-                position: "absolute",
-                height: "100%",
-                width: "100%",
                 opacity: `${mixedRoom == 3 ? 1 : 0}`,
               }}
             />
@@ -350,8 +252,6 @@ const Rooms = () => {
               src="/mixed4.webp"
               alt="Picture of the author"
               layout="fill"
-              // height={500}
-              // width={500}
               objectFit="cover"
               style={{
                 top: "0",
@@ -366,15 +266,8 @@ const Rooms = () => {
               src="/mixed5.webp"
               alt="Picture of the author"
               layout="fill"
-              // height={500}
-              // width={500}
               objectFit="cover"
               style={{
-                top: "0",
-                left: "0",
-                position: "absolute",
-                height: "100%",
-                width: "100%",
                 opacity: `${mixedRoom == 5 ? 1 : 0}`,
               }}
             />
