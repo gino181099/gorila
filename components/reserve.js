@@ -69,6 +69,7 @@ const Reserve = () => {
           className="submit_link"
           target="_blank"
           href={`https://hotels.cloudbeds.com/es/reservation/vrb2dl?ga_sess_id=1641116198.1656893645#checkin=${checkIn}&amp;checkout=${checkOut}`}
+          rel="noreferrer"
         >
           Ir
         </a>

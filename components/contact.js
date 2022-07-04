@@ -16,7 +16,11 @@ const Contacto = () => {
             <li>
               <p>
                 Teléfono:{" "}
-                <a href="https://wa.me/+5492616806358" target="_blank">
+                <a
+                  href="https://wa.me/+5492616806358"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   +54 9 261 680-6358
                 </a>
               </p>
@@ -35,6 +39,7 @@ const Contacto = () => {
                 <a
                   href="https://www.google.com/maps?ll=-32.890366,-68.852299&z=16&t=m&hl=es&gl=AR&mapclient=embed&cid=17945777925891797207"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   Martín Zapata 155 · Ciudad · Mza · ARG
                 </a>
