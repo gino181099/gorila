@@ -1,16 +1,26 @@
 import { useState } from "react";
 
 const Reserve = () => {
-  const [checkIn, setCheckIn] = useState("2022-07-03");
-  const [checkOut, setCheckOut] = useState("2022-07-03");
+  const date = new Date();
+  const curr_dateToday = (date.getDate() + 1).toString().padStart(2, "0");
+  const curr_dateOutToday = (date.getDate() + 3).toString().padStart(2, "0");
+  const curr_monthToday = (date.getMonth() + 1).toString().padStart(2, "0");
+  const curr_yearToday = date.getFullYear();
+  const checkInDate = `${curr_yearToday}-${curr_monthToday}-${curr_dateToday}`;
+  const checkOutDate = `${curr_yearToday}-${curr_monthToday}-${curr_dateOutToday}`;
+  const [checkIn, setCheckIn] = useState(checkInDate);
+  const [checkOut, setCheckOut] = useState(checkOutDate);
+
   const onChangeCheckIn = (e) => {
     const newDate = new Date(e.target.value);
     let curr_date = (newDate.getDate() + 1).toString().padStart(2, "0");
+    let curr_dateOut = (newDate.getDate() + 3).toString().padStart(2, "0");
     let curr_month = (newDate.getMonth() + 1).toString().padStart(2, "0");
     let curr_year = newDate.getFullYear();
     const dateToPass = `${curr_year}-${curr_month}-${curr_date}`;
-    console.log(dateToPass);
+    const dateToPassOut = `${curr_year}-${curr_month}-${curr_dateOut}`;
     setCheckIn(dateToPass);
+    setCheckOut(dateToPassOut);
   };
   const onChangeCheckOut = (e) => {
     const newDate = new Date(e.target.value);
@@ -18,7 +28,6 @@ const Reserve = () => {
     let curr_month = (newDate.getMonth() + 1).toString().padStart(2, "0");
     let curr_year = newDate.getFullYear();
     const dateToPass = `${curr_year}-${curr_month}-${curr_date}`;
-    console.log(dateToPass);
     setCheckOut(dateToPass);
   };
   return (
@@ -39,6 +48,7 @@ const Reserve = () => {
           className="date_mobile widget_hide"
           id="start_date_mobile"
           onChange={onChangeCheckIn}
+          value={checkIn}
         ></input>
         <label
           className="control-label"
@@ -53,6 +63,7 @@ const Reserve = () => {
           className="date_mobile widget_hide"
           id="end_date_mobile"
           onChange={onChangeCheckOut}
+          value={checkOut}
         ></input>
         <a
           className="submit_link"
