@@ -1,5 +1,3 @@
-import React from "react";
-
 const Contacto = () => {
   return (
     <section>
@@ -84,12 +82,7 @@ const Contacto = () => {
           flex-wrap: wrap;
           color: white;
           padding-top: 100px;
-          gap: 2em
-        }
-        @media(max-width: 1300px){
-          .contact__content{
-            justify-content: center;
-            text-align: center
+          gap: 2em;
         }
         ul {
           list-style: none;
@@ -106,6 +99,12 @@ const Contacto = () => {
         }
         iframe {
           border: none;
+        }
+        @media (max-width: 1300px) {
+          .contact__content {
+            justify-content: center;
+            text-align: center;
+          }
         }
       `}</style>
     </section>
