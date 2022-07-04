@@ -114,7 +114,7 @@ export default function Heading() {
           mix-blend-mode: difference;
           line-height: 105%;
           transition: 0.25s;
-          padding: 5px 10px 10px 10px;
+          padding: 10px;
         }
         .about__button {
           position: relative;

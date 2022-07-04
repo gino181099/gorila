@@ -95,14 +95,11 @@ const Reserve = () => {
           flex-wrap: wrap;
           align-items: center;
           width: 100%;
-          max-width: 615px;
-          width: 615px;
+          max-width: 650px;
           font-size: 24px;
           font-weight: 300;
           border: 1px solid black;
-          padding-left: 15px;
-          padding-top: 5px;
-          padding-bottom: 5px;
+          padding: 20px;
           border-radius: 50px;
           gap: 1em;
         }
@@ -114,6 +111,24 @@ const Reserve = () => {
           border-radius: 50%;
           background: #45add9;
           margin: 0 5px;
+        }
+        @media (max-width: 1232px) {
+          .reserve {
+            justify-content: center;
+          }
+          .reserve .title__reserve {
+            text-align: center;
+          }
+        }
+        @media (max-width: 650px) {
+          .reserve .title__reserve {
+            font-size: 2.5em;
+          }
+        }
+        @media (max-width: 320px) {
+          .reserve .title__reserve {
+            font-size: 2em;
+          }
         }
       `}</style>
     </div>

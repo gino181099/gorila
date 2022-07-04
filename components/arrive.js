@@ -27,9 +27,8 @@ const Arrive = () => {
         </div>
         <div className="image__content">
           <Image
-            src="/2.webp"
-            alt="Picture of the author"
-            // layout="fill"
+            src="/aeropuerto.webp"
+            alt="Aeropuerto el Plumerillo"
             width={500}
             height={438}
             objectFit="cover"
@@ -39,9 +38,8 @@ const Arrive = () => {
       <div className="content">
         <div className="image__content">
           <Image
-            src="/1.webp"
-            alt="Picture of the author"
-            // layout="fill"
+            src="/terminal.webp"
+            alt="Terminal de Mendoza"
             width={500}
             height={675}
             objectFit="cover"
@@ -70,7 +68,7 @@ const Arrive = () => {
         </div>
       </div>
       <style jsx>{`
-        .title__arrive h2 {
+        h2 {
           font-size: 64px;
           font-weight: 300;
           text-align: center;
@@ -115,6 +113,28 @@ const Arrive = () => {
         }
         .image__content img {
           height: 100%;
+        }
+        @media (max-width: 650px) {
+          h2 {
+            font-size: 2.5em;
+          }
+          h3 {
+            font-size: 1.5em;
+          }
+          h4 {
+            font-size: 1.25em;
+          }
+          .content p {
+            font-size: 1em;
+          }
+          .content {
+            padding: 100px 10px;
+          }
+        }
+        @media (max-width: 320px) {
+          h2 {
+            font-size: 2em;
+          }
         }
       `}</style>
     </section>

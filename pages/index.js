@@ -20,7 +20,7 @@ export default function Home() {
         <title>
           Hostel en Mendoza-Para jovenes viajeros- Hostel Gorilla Mendoza
         </title>
-        <link rel="shortcut icon" href="/icon.png" />
+        <link rel="shortcut icon" href="/icon.webp" />
         <meta
           name="description"
           content="Hostel Gorilla es ideal para jóvenes, ubicado en el corazón de la ciudad de Mendoza, a 2 cuadras de Arístides y 5 del Parque San Martin. 

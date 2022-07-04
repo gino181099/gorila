@@ -61,7 +61,7 @@ const Contacto = () => {
           background-color: #151515;
           padding: 100px;
         }
-        .contact__title h2 {
+        h2 {
           font-size: 64px;
           font-weight: 300;
           text-align: center;
@@ -104,6 +104,22 @@ const Contacto = () => {
           .contact__content {
             justify-content: center;
             text-align: center;
+          }
+          iframe {
+            width: 100%;
+          }
+        }
+        @media (max-width: 650px) {
+          h2 {
+            font-size: 2.5em;
+          }
+          ul {
+            font-size: 1.5em;
+          }
+        }
+        @media (max-width: 320px) {
+          h2 {
+            font-size: 1em;
           }
         }
       `}</style>

@@ -19,8 +19,8 @@ const Activities = () => {
         </p>
         <div className="img__content">
           <Image
-            src="/activities.jpg"
-            alt="Picture of the author"
+            src="/activities.webp"
+            alt="Imagen de Actividades"
             layout="fill"
             objectFit="cover"
           />
@@ -29,13 +29,14 @@ const Activities = () => {
       <style jsx>{`
         .activities {
           background-color: #151515;
+          padding: 100px 0;
         }
         .actitivities__title {
           padding: 10px 0;
           text-align: center;
           color: white;
         }
-        .actitivities__title h2 {
+        h2 {
           font-size: 64px;
           font-weight: 300;
           text-align: center;
@@ -59,19 +60,29 @@ const Activities = () => {
         .img__content {
           max-width: 500px;
           width: 500px;
-          height: 500px;
+          height: 300px;
           position: relative;
-          margin: 100px auto;
+          margin: 0px auto;
         }
         .content p {
           max-width: 500px;
           width: 500px;
-          font-size: 28px;
-          margin: 100px auto;
+          font-size: 20px;
+          margin: 50px auto;
           font-weight: 300;
         }
         .content a {
           color: #40b9ed;
+        }
+        @media (max-width: 650px) {
+          h2 {
+            font-size: 2.5em;
+          }
+        }
+        @media (max-width: 320px) {
+          h2 {
+            font-size: 2em;
+          }
         }
       `}</style>
     </section>

@@ -254,11 +254,6 @@ const Rooms = () => {
               layout="fill"
               objectFit="cover"
               style={{
-                top: "0",
-                left: "0",
-                position: "absolute",
-                height: "100%",
-                width: "100%",
                 opacity: `${mixedRoom == 4 ? 1 : 0}`,
               }}
             />
@@ -332,6 +327,7 @@ const Rooms = () => {
           display: flex;
           flex-direction: column;
           justify-content: flex-start;
+          overflow: hidden;
         }
         .right__room {
           padding-top: 50px;
@@ -408,6 +404,28 @@ const Rooms = () => {
           .right__room,
           .right__room p {
             padding-top: 0;
+          }
+        }
+        @media (max-width: 650px) {
+          h2 {
+            font-size: 2.5em;
+          }
+          .rooms {
+            padding: 50px 10px 100px;
+          }
+          .room div {
+            width: 90%;
+          }
+        }
+        @media (max-width: 600px) {
+          .image__description__room,
+          .image__carousel__room {
+            width: 100% !important;
+          }
+        }
+        @media (max-width: 320px) {
+          h2 {
+            font-size: 2em;
           }
         }
       `}</style>

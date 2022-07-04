@@ -1,4 +1,4 @@
-import React from "react";
+import Image from "next/image";
 
 const Instagram = () => {
   return (
@@ -8,7 +8,53 @@ const Instagram = () => {
         <br />
         SÍGUENOS
       </h2>
-      <div className="images__instagram"></div>
+      <a
+        href="https://www.instagram.com/gorillahostel/"
+        target="_blank"
+        rel="noreferrer"
+        className="images__instagram"
+      >
+        <div className="image">
+          <Image
+            src="/instagram1.webp"
+            alt="Picture of the author"
+            layout="fill"
+            objectFit="cover"
+          />
+        </div>
+        <div className="image">
+          <Image
+            src="/instagram2.webp"
+            alt="Picture of the author"
+            layout="fill"
+            objectFit="cover"
+          />
+        </div>
+        <div className="image">
+          <Image
+            src="/instagram3.webp"
+            alt="Picture of the author"
+            layout="fill"
+            objectFit="cover"
+          />
+        </div>
+        <div className="image">
+          <Image
+            src="/instagram4.webp"
+            alt="Picture of the author"
+            layout="fill"
+            objectFit="cover"
+          />
+        </div>
+        <div className="image">
+          <Image
+            src="/instagram5.webp"
+            alt="Picture of the author"
+            layout="fill"
+            objectFit="cover"
+          />
+        </div>
+      </a>
       <style jsx>{`
         .instagram {
           padding: 100px 0;
@@ -30,9 +76,30 @@ const Instagram = () => {
           display: flex;
           width: calc(100vw - 200px);
           margin: 100px auto 0;
-          background: black;
-          height: 250px;
           overflow: hidden;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+        .image {
+          width: 260px;
+          max-width: 260px;
+          height: 260px;
+          overflow: hidden;
+          position: relative;
+          transition: 0.75s;
+        }
+        .image:hover {
+          transform: scale(1.1);
+        }
+        @media (max-width: 650px) {
+          h2 {
+            font-size: 2.5em;
+          }
+        }
+        @media (max-width: 320px) {
+          h2 {
+            font-size: 2em;
+          }
         }
       `}</style>
     </section>

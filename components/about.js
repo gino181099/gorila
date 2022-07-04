@@ -64,7 +64,7 @@ const About = () => {
           <div className="image__block">
             <Image
               src="/frente.webp"
-              alt="Picture of the author"
+              alt="Frente de Gorilla Hostel"
               width={700}
               height={500}
               objectFit="cover"
@@ -83,7 +83,7 @@ const About = () => {
           <div className="image__block">
             <Image
               src="/coworking.webp"
-              alt="Picture of the author"
+              alt="Coworking"
               width={700}
               height={500}
               objectFit="cover"
@@ -99,7 +99,7 @@ const About = () => {
           <div className="image__block">
             <Image
               src="/bar.webp"
-              alt="Picture of the author"
+              alt="Bar de Gorilla Hostel"
               width={700}
               height={500}
               objectFit="cover"
@@ -115,7 +115,7 @@ const About = () => {
           <div className="image__block">
             <Image
               src="/desayuno.webp"
-              alt="Picture of the author"
+              alt="Desayuno de Gorilla Hostel"
               width={700}
               height={500}
               objectFit="cover"
@@ -206,6 +206,9 @@ const About = () => {
           transform: translateY(-20%);
           transition: 1s;
         }
+        .mobile {
+          padding: 100px 0;
+        }
         #two p,
         #four p {
           right: 0;
@@ -225,6 +228,11 @@ const About = () => {
           }
           .mobile__block {
             margin: auto;
+            padding: 0;
+            height: 70vh;
+          }
+          .mobile {
+            padding: 100px 0;
           }
           .about {
             justify-content: center;
@@ -245,6 +253,9 @@ const About = () => {
             right: 0%;
             width: 100%;
             max-width: 100%;
+          }
+          .mobile__block {
+            margin-bottom: 0px !important;
           }
         }
         @media (max-width: 400px) {
