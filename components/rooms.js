@@ -395,6 +395,21 @@ const Rooms = () => {
           overflow: hidden;
           position: relative;
         }
+        @media (max-width: 1215px) {
+          .room {
+            justify-content: center;
+          }
+          .image__description__room {
+            display: none !important;
+          }
+          .left__room:nth-child(2) {
+            order: -1;
+          }
+          .right__room,
+          .right__room p {
+            padding-top: 0;
+          }
+        }
       `}</style>
     </section>
   );

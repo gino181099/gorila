@@ -15,17 +15,29 @@ const Contacto = () => {
           <ul>
             <li>
               <p>
-                Teléfono: <a>+54 9 261 0806 358</a>
+                Teléfono:{" "}
+                <a href="https://wa.me/+5492616806358" target="_blank">
+                  +54 9 261 680-6358
+                </a>
               </p>
             </li>
             <li>
               <p>
-                Email: <a>hostelgorilla@gmail.com</a>
+                Email:{" "}
+                <a href="mailto:hostelgorilla@gmail.com">
+                  hostelgorilla@gmail.com
+                </a>
               </p>
             </li>
             <li>
               <p>
-                Dirección: <a>Martín Zapata 155 · Ciudad · Mza · ARG</a>
+                Dirección:{" "}
+                <a
+                  href="https://www.google.com/maps?ll=-32.890366,-68.852299&z=16&t=m&hl=es&gl=AR&mapclient=embed&cid=17945777925891797207"
+                  target="_blank"
+                >
+                  Martín Zapata 155 · Ciudad · Mza · ARG
+                </a>
               </p>
             </li>
           </ul>
@@ -35,9 +47,9 @@ const Contacto = () => {
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3350.2950580636825!2d-68.85448778496745!3d-32.89036628093796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e09042415c513%3A0xf90c35f15ad3b0d7!2sGorilla%20Hostel!5e0!3m2!1ses!2sar!4v1656945418379!5m2!1ses!2sar"
             width="500"
             height="350"
-            allowfullscreen=""
+            allowFullScreen=""
             loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
+            referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
       </div>
@@ -67,6 +79,12 @@ const Contacto = () => {
           flex-wrap: wrap;
           color: white;
           padding-top: 100px;
+          gap: 2em
+        }
+        @media(max-width: 1300px){
+          .contact__content{
+            justify-content: center;
+            text-align: center
         }
         ul {
           list-style: none;
