@@ -4,10 +4,8 @@ import Head from "next/head";
 import About from "../components/about";
 import Activities from "../components/activities";
 import Arrive from "../components/arrive";
-import Contacto from "../components/contact";
 import Heading from "../components/home/heading";
 import Instagram from "../components/instagram";
-import Menu from "../components/menu";
 import Reserve from "../components/reserve";
 import Rooms from "../components/rooms";
 
@@ -39,7 +37,6 @@ Amplias áreas comunes, con jardín, piscina, metegol y ping pong. Bar ,Wifi gra
         ></meta>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <Menu />
       <Heading />
       <Reserve />
       <About />
@@ -47,7 +44,6 @@ Amplias áreas comunes, con jardín, piscina, metegol y ping pong. Bar ,Wifi gra
       <Activities />
       <Instagram />
       <Arrive />
-      <Contacto />
     </main>
   );
 }

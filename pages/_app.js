@@ -1,7 +1,15 @@
-import '../styles/globals.css'
+import Contacto from "../components/contact";
+import Menu from "../components/menu";
+import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <>
+      <Menu />
+      <Component {...pageProps} />
+      <Contacto />
+    </>
+  );
 }
 
-export default MyApp
+export default MyApp;

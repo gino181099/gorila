@@ -95,6 +95,7 @@ export default function Heading() {
           /* background: red; */
           text-align: center;
         }
+
         .content {
           position: absolute;
           left: 50%;
@@ -119,6 +120,13 @@ export default function Heading() {
         .about__button {
           position: relative;
           border-bottom: 1px solid #fff;
+          transform: translateY(10%);
+          opacity: 0;
+          animation-name: init;
+          animation-duration: 0.5s;
+          animation-delay: 1s;
+          animation-iteration-count: 1;
+          animation-fill-mode: forwards;
         }
         .background__about {
           width: 100%;
@@ -137,6 +145,13 @@ export default function Heading() {
           margin-top: 25px;
           display: flex;
           column-gap: 18px;
+          transform: translateY(20%);
+          opacity: 0;
+          animation-name: init;
+          animation-duration: 0.5s;
+          animation-delay: 1.5s;
+          animation-iteration-count: 1;
+          animation-fill-mode: forwards;
         }
         .social__buttons a {
           transition: 0.5s;
@@ -150,6 +165,12 @@ export default function Heading() {
           line-height: 105%;
           padding-bottom: 25px;
           padding-top: 10px;
+          opacity: 0;
+          animation-name: init;
+          animation-duration: 1.5s;
+          animation-delay: 0.5s;
+          animation-iteration-count: 1;
+          animation-fill-mode: forwards;
         }
         .title h2 {
           font-weight: 400;
@@ -167,6 +188,18 @@ export default function Heading() {
           width: 225px;
           overflow: hidden;
           position: relative;
+          opacity: 0;
+          animation-name: init;
+          animation-duration: 1s;
+          animation-delay: 0s;
+          animation-iteration-count: 1;
+          animation-fill-mode: forwards;
+        }
+        @keyframes init {
+          to {
+            opacity: 1;
+            transform: translateY(0px);
+          }
         }
         @media (max-width: 650px) {
           .logo__heading {

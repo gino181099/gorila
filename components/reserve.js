@@ -1,6 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import useObserver from "./useObserver";
 
 const Reserve = () => {
+  const [observer, setElements, entries] = useObserver({
+    threshold: 0.5,
+    root: null,
+  });
   const date = new Date();
   const curr_dateToday = (date.getDate() + 1).toString().padStart(2, "0");
   const curr_dateOutToday = (date.getDate() + 3).toString().padStart(2, "0");
@@ -30,14 +35,27 @@ const Reserve = () => {
     const dateToPass = `${curr_year}-${curr_month}-${curr_date}`;
     setCheckOut(dateToPass);
   };
+  useEffect(() => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const lazyImage = entry.target;
+        lazyImage.classList.add("show");
+        observer.unobserve(lazyImage);
+      }
+    });
+  }, [entries, observer]);
+  useEffect(() => {
+    const images = document.querySelectorAll(".reserve__animation");
+    setElements(images);
+  }, [setElements]);
   return (
     <div className="reserve">
-      <div className="title__reserve">
+      <div className="title__reserve reserve__animation">
         <h2>
           Reserva Ahora! <br />
         </h2>
         <p>
-          En caso de viajar un grupo de varias personas, puedes contactarte
+          En caso de viajar con un grupo de varias personas, puedes contactarte
           directamente{" "}
           <a
             href="https://wa.me/+5492616806358"
@@ -46,11 +64,11 @@ const Reserve = () => {
           >
             por aquí
           </a>
-          , ofrecemos descuentos
+          , ofrecemos descuentos.
         </p>
       </div>
 
-      <div className="dates_group">
+      <div className="dates_group reserve__animation">
         <label
           className="control-label"
           htmlFor="widget_date_3816"
@@ -100,6 +118,16 @@ const Reserve = () => {
           flex-wrap: wrap;
           gap: 25px;
         }
+        .reserve .title__reserve {
+          opacity: 0;
+          transition: 0.5s;
+          transform: translateY(20%);
+        }
+        .reserve .title__reserve.show {
+          opacity: 1;
+          transform: translateY(0%);
+        }
+
         .reserve .title__reserve h2 {
           font-size: 64px;
           font-weight: 300;
@@ -108,11 +136,13 @@ const Reserve = () => {
         .reserve .title__reserve p {
           font-size: 12px;
           max-width: 500px;
+          padding-top: 10px;
         }
         .reserve .title__reserve a {
           color: blue;
           display: inline-block;
         }
+
         .dates_group {
           display: flex;
           justify-content: center;
@@ -126,6 +156,13 @@ const Reserve = () => {
           padding: 20px;
           border-radius: 50px;
           gap: 1em;
+          opacity: 0;
+          transition: 1s;
+          transform: translateY(20%);
+        }
+        .dates_group.show {
+          opacity: 1;
+          transform: translateY(0%);
         }
         .dates_group input {
           border: none;

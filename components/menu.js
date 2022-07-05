@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const Menu = () => {
@@ -59,7 +60,14 @@ const Menu = () => {
             <a className="reserve">Reservar</a>
           </li>
           <li>
-            <a>Actividades</a>
+            <Link href="/">
+              <a>Inicio</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/activities">
+              <a>Actividades</a>
+            </Link>
           </li>
           <li>
             <a>Habitaciones</a>
@@ -120,7 +128,7 @@ const Menu = () => {
         .toggle svg {
           transform: translateY(3px);
         }
-        @media (max-width: 680px) {
+        @media (max-width: 780px) {
           .toggle {
             display: unset;
           }
