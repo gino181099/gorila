@@ -1,26 +1,31 @@
 import { urlFor } from "../lib/sanity";
 
 const Card = ({ activity }) => {
-  const { title, price, description, mainImage, slug } = activity;
+  //   const { title, price, description, mainImage, slug } = activity;
   return (
     <div className="card">
       <div className="card__img">
-        <img
-          className="main-image"
-          alt={title + " imagen"}
-          src={urlFor(mainImage)}
-        />
+        {activity.mainImage && (
+          <img
+            className="main-image"
+            alt={activity.title + " imagen"}
+            src={urlFor(activity.mainImage)}
+          />
+        )}
       </div>
       <div className="card__content">
         <div className="card__title">
-          <h3>{title}</h3>
+          <h3>{activity.title ? activity.title : "Error 404"}</h3>
         </div>
         <div className="card__price">
-          <p>{price == null ? "Variado" : `$${price}`}</p>
+          <p>{activity.price == null ? "Variado" : `$${activity.price}`}</p>
         </div>
         <div className="card__description">
-          <p>{description}</p>
-          <a href={`/activities/${slug.current}`}>Ver más</a>
+          <p>{activity.description ? activity.description : ""}</p>
+
+          {activity.slug && (
+            <a href={`/activities/${activity.slug.current}`}>Ver más</a>
+          )}
         </div>
       </div>
       <style jsx>{`

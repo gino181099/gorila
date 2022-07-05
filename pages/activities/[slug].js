@@ -14,21 +14,28 @@ const ActivityComponents = {
 };
 
 const Activity = ({ activity }) => {
-  const { title, body, mainImage } = activity;
+  //   const { title, body, mainImage } = activity;
   return (
     <>
       {activity ? (
         <article className="activity-container">
           <div className="title">
-            <h1>{title}</h1>
-            <img
-              className="main-image"
-              alt={title + " imagen"}
-              src={urlFor(mainImage)}
-            />
+            <h1>{activity.title ? activity.title : "Error 404"}</h1>
+            {activity.mainImage && (
+              <img
+                className="main-image"
+                alt={activity.title + " imagen"}
+                src={urlFor(activity.mainImage)}
+              />
+            )}
           </div>
           <div className="content">
-            <PortableText value={body} components={ActivityComponents} />
+            {activity.body && (
+              <PortableText
+                value={activity.body}
+                components={ActivityComponents}
+              />
+            )}
           </div>
         </article>
       ) : (
