@@ -52,7 +52,7 @@ const Activities = () => {
         .content {
           display: flex;
           justify-content: space-between;
-          padding: 0 100px 0;
+          padding: 100px 100px 0;
           color: white;
           align-items: center;
           flex-wrap: wrap;
@@ -77,6 +77,12 @@ const Activities = () => {
         @media (max-width: 650px) {
           h2 {
             font-size: 2.5em;
+          }
+        }
+        @media (max-width: 600px) {
+          .content {
+            padding: 100px 10px 0;
+            text-align: center;
           }
         }
         @media (max-width: 320px) {

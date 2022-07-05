@@ -32,7 +32,23 @@ const Reserve = () => {
   };
   return (
     <div className="reserve">
-      <p className="title__reserve">Reserva Ahora!</p>
+      <div className="title__reserve">
+        <h2>
+          Reserva Ahora! <br />
+        </h2>
+        <p>
+          En caso de viajar un grupo de varias personas, puedes contactarte
+          directamente{" "}
+          <a
+            href="https://wa.me/+5492616806358"
+            target="_blank"
+            rel="noreferrer"
+          >
+            por aquí
+          </a>
+          , ofrecemos descuentos
+        </p>
+      </div>
 
       <div className="dates_group">
         <label
@@ -84,10 +100,18 @@ const Reserve = () => {
           flex-wrap: wrap;
           gap: 25px;
         }
-        .reserve .title__reserve {
+        .reserve .title__reserve h2 {
           font-size: 64px;
           font-weight: 300;
           line-height: 100%;
+        }
+        .reserve .title__reserve p {
+          font-size: 12px;
+          max-width: 500px;
+        }
+        .reserve .title__reserve a {
+          color: blue;
+          display: inline-block;
         }
         .dates_group {
           display: flex;
@@ -121,12 +145,12 @@ const Reserve = () => {
           }
         }
         @media (max-width: 650px) {
-          .reserve .title__reserve {
+          .reserve .title__reserve h2 {
             font-size: 2.5em;
           }
         }
         @media (max-width: 320px) {
-          .reserve .title__reserve {
+          .reserve .title__reserve h2 {
             font-size: 2em;
           }
         }

@@ -114,11 +114,19 @@ const Contacto = () => {
             font-size: 2.5em;
           }
           ul {
-            font-size: 1.5em;
+            font-size: 1.25em;
+          }
+        }
+        @media (max-width: 600px) {
+          section {
+            padding: 100px 10px;
           }
         }
         @media (max-width: 320px) {
           h2 {
+            font-size: 2em;
+          }
+          ul {
             font-size: 1em;
           }
         }

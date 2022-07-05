@@ -96,6 +96,11 @@ const Instagram = () => {
             font-size: 2.5em;
           }
         }
+        @media (max-width: 600px) {
+          .images__instagram {
+            width: 90%;
+          }
+        }
         @media (max-width: 320px) {
           h2 {
             font-size: 2em;

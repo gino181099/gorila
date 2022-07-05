@@ -25,23 +25,21 @@ const Arrive = () => {
             trayecto, y finalmente caminar hasta el hostel.
           </p>
         </div>
-        <div className="image__content">
+        <div className="image__content one">
           <Image
             src="/aeropuerto.webp"
             alt="Aeropuerto el Plumerillo"
-            width={500}
-            height={438}
+            layout="fill"
             objectFit="cover"
           />
         </div>
       </div>
       <div className="content">
-        <div className="image__content">
+        <div className="image__content two">
           <Image
             src="/terminal.webp"
             alt="Terminal de Mendoza"
-            width={500}
-            height={675}
+            layout="fill"
             objectFit="cover"
           />
         </div>
@@ -106,13 +104,33 @@ const Arrive = () => {
           font-size: 20px;
           max-width: 500px;
         }
-        .image__content {
-          max-width: 500px;
+        .image__content.one {
           width: 500px;
-          height: 300px;
+          max-width: 500px;
+          height: 438px;
+          position: relative;
         }
-        .image__content img {
-          height: 100%;
+        .image__content.two {
+          width: 500px;
+          max-width: 500px;
+          height: 675px;
+          position: relative;
+        }
+
+        @media (max-width: 1216px) {
+          .content {
+            justify-content: center;
+            gap: 2em;
+          }
+          .text__content:nth-child(2) {
+            order: -1;
+          }
+          .image__content.one {
+            height: 300px;
+          }
+          .image__content.two {
+            height: 300px;
+          }
         }
         @media (max-width: 650px) {
           h2 {
@@ -127,6 +145,8 @@ const Arrive = () => {
           .content p {
             font-size: 1em;
           }
+        }
+        @media (max-width: 600px) {
           .content {
             padding: 100px 10px;
           }
