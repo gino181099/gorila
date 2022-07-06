@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import Selector from "./selector";
 
-const Menu = ({ t }) => {
+const Menu = ({ t, locale }) => {
   const [show, setShow] = useState(false);
 
   const controlNavbar = () => {
@@ -69,7 +69,7 @@ const Menu = ({ t }) => {
             </Link>
           </li>
           <li>
-            <Link href="/activities">
+            <Link href={`/${locale}/activities`}>
               <a>{t.actividades}</a>
             </Link>
           </li>

@@ -18,7 +18,7 @@ function MyApp({ Component, pageProps }) {
       : ingles;
   return (
     <>
-      <Menu t={t.menu} />
+      <Menu t={t.menu} locale={locale} />
       <Component {...pageProps} />
       <Contacto t={t.contacto} />
     </>

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const Activities = ({ t }) => {
+const Activities = ({ t, locale }) => {
   return (
     <section className="activities">
       <div className="actitivities__title">
@@ -14,7 +14,7 @@ const Activities = ({ t }) => {
       <div className="content">
         <p>
           {t.actividadesDescripcion}{" "}
-          <Link href="/activities">
+          <Link href={`/${locale}/activities`}>
             <a>{t.link}</a>
           </Link>
         </p>

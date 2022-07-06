@@ -54,7 +54,7 @@ Amplias áreas comunes, con jardín, piscina, metegol y ping pong. Bar ,Wifi gra
       <Reserve t={t.inicio} />
       <About t={t.inicio} />
       <Rooms t={t.inicio} />
-      <Activities t={t.inicio} />
+      <Activities t={t.inicio} locale={locale} />
       <Instagram t={t.inicio} />
       <Arrive t={t.inicio} />
     </main>
