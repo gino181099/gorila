@@ -1,29 +1,21 @@
 import Image from "next/image";
 
-const Arrive = () => {
+const Arrive = ({ t }) => {
   return (
     <section className="arrive">
       <div className="title__arrive">
         <h2>
-          <span>CÓMO</span>
+          <span>{t.como}</span>
           <br />
-          LLEGAR AL HOSTEL
+          {t.llegar}
         </h2>
       </div>
       <div className="content">
         <div className="text__content">
-          <h3>Desde el aeropuerto internacional El Plumerillo</h3>
-          <p>
-            Puede Ir desde el Aeropuerto de Mendoza al centro en Taxi / Uber /
-            Cabify
-          </p>
-          <h4>En bus</h4>
-          <p>
-            El colectivo Línea 680 es recomendable de tomar si viajas solo o en
-            pareja, ya que además de la ventaja de ser más barato que las otras
-            opciones, también deberás cargar tus propias valijas durante todo el
-            trayecto, y finalmente caminar hasta el hostel.
-          </p>
+          <h3>{t.aeropuertoTitulo}</h3>
+          <p>{t.aeropuertoDescripcion}</p>
+          <h4>{t.bus}</h4>
+          <p>{t.aeropuertoBus}</p>
         </div>
         <div className="image__content one">
           <Image
@@ -44,25 +36,12 @@ const Arrive = () => {
           />
         </div>
         <div className="text__content">
-          <h3>Desde la terminal Ómnibus de Mendoza</h3>
-          <p>
-            Puede Ir desde la terminal de Mendoza al centro en Taxi / Uber /
-            Cabify
-          </p>
-          <h4>En bus</h4>
-          <p>
-            Podés tomarte : 201 o 200 frente a la terminal, en el Retorno ACA,
-            parada: Arturo González y Elpidio González (Guaymallén, Mendoza)
-            Parada: Av. Emilio Civit y Coronel Rodriguez caminar por Rodriguez 2
-            cuadras y girar a la izquierda por Martin Zapata 50 mts
-          </p>
-          <h4>Caminando</h4>
-          <p>
-            La terminal está a 2,5km del hostel, y es todo recto: Vas por calle
-            Alem, luego cambia de nombre al cruzar Av. San Martín a Montevideo y
-            una vez que cruzás Belgrano cambia a Martín Zapata. ( es la misma
-            calle que cambia de nombre, Mendoza es así )
-          </p>
+          <h3>{t.terminalTitulo}</h3>
+          <p>{t.terminalDescripcion}</p>
+          <h4>{t.bus}</h4>
+          <p>{t.terminalBus}</p>
+          <h4>{t.caminando}</h4>
+          <p>{t.terminalCaminado}</p>
         </div>
       </div>
       <style jsx>{`

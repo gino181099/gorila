@@ -1,11 +1,11 @@
-const Contacto = () => {
+const Contacto = ({ t }) => {
   return (
     <section>
       <div className="contact__title">
         <h2>
-          <span>DATOS DE</span>
+          <span>{t.datos}</span>
           <br />
-          CONTACTO
+          {t.contacto}
         </h2>
       </div>
       <div className="contact__content">
@@ -13,7 +13,7 @@ const Contacto = () => {
           <ul>
             <li>
               <p>
-                Teléfono:{" "}
+                {t.telefono}{" "}
                 <a
                   href="https://wa.me/+5492616806358"
                   target="_blank"
@@ -25,7 +25,7 @@ const Contacto = () => {
             </li>
             <li>
               <p>
-                Email:{" "}
+                {t.email}{" "}
                 <a href="mailto:hostelgorilla@gmail.com">
                   hostelgorilla@gmail.com
                 </a>
@@ -33,7 +33,7 @@ const Contacto = () => {
             </li>
             <li>
               <p>
-                Dirección:{" "}
+                {t.direccion}{" "}
                 <a
                   href="https://www.google.com/maps?ll=-32.890366,-68.852299&z=16&t=m&hl=es&gl=AR&mapclient=embed&cid=17945777925891797207"
                   target="_blank"

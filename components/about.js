@@ -2,7 +2,7 @@ import Image from "next/image";
 import { useEffect } from "react";
 import useObserver from "./useObserver";
 
-const About = () => {
+const About = ({ t }) => {
   const [observer, setElements, entries] = useObserver({
     threshold: 0.5,
     root: null,
@@ -43,19 +43,19 @@ const About = () => {
         <ul>
           <li className="one active">
             <div className="line"></div>
-            <p>¿Quiénes Somos?</p>
+            <p>{t.quienesSomos}</p>
           </li>
           <li className="two">
             <div className="line"></div>
-            <p>¿Por qué elegirnos?</p>
+            <p>{t.porqueElegirnos}</p>
           </li>
           <li className="three">
             <div className="line"></div>
-            <p>Diversión asegurada</p>
+            <p>{t.diversionAsegurada}</p>
           </li>
           <li className="four">
             <div className="line"></div>
-            <p>Desayuno continental incluido</p>
+            <p>{t.desayuno}</p>
           </li>
         </ul>
       </div>
@@ -70,14 +70,7 @@ const About = () => {
               objectFit="cover"
             />
           </div>
-          <p>
-            Gorilla Hostel fue creado por hermanos en el 2015 con el deseo de
-            ofrecer algo único:{" "}
-            <b>
-              Un hostel de diseño, excelente calidad y divertido para jóvenes
-              viajeros en la mejor zona de la Ciudad de Mendoza.
-            </b>
-          </p>
+          <p>{t.textoImagen1}</p>
         </div>
         <div className="mobile__block" id="two">
           <div className="image__block">
@@ -89,11 +82,7 @@ const About = () => {
               objectFit="cover"
             />
           </div>
-          <p>
-            Estamos en una increible ubicación cerca de todo lo lindo de
-            Mendoza! Además somos el único hostel de Mendoza ideal para nómades
-            digitales.
-          </p>
+          <p>{t.textoImagen2}</p>
         </div>
         <div className="mobile__block" id="three">
           <div className="image__block">
@@ -105,11 +94,7 @@ const About = () => {
               objectFit="cover"
             />
           </div>
-          <p>
-            Tenemos un BAR exclusivo para nuestros pasajeros que garantiza
-            diversión todas las noches. Además, te ayudamos a reservar las
-            mejores excursiones, salidas, eventos, fiestas.
-          </p>
+          <p>{t.textoImagen3}</p>
         </div>
         <div className="mobile__block" id="four">
           <div className="image__block">
@@ -121,11 +106,7 @@ const About = () => {
               objectFit="cover"
             />
           </div>
-          <p>
-            Nuestra tarifa incluye desayuno! El mismo cuenta de medialunas
-            caseras recién horneadas, pan lactal, manteca, dulce de leche,
-            mermeladas, frutas de estación, leche, cereales, cafe, te, jugos.
-          </p>
+          <p>{t.textoImagen4}</p>
         </div>
       </div>
 

@@ -1,21 +1,22 @@
 import Image from "next/image";
+import Link from "next/link";
 
-const Activities = () => {
+const Activities = ({ t }) => {
   return (
     <section className="activities">
       <div className="actitivities__title">
         <h2>
-          <span>NUESTRAS</span>
+          <span>{t.nuestras}</span>
           <br />
-          ACTIVIDADES
+          {t.actividades}
         </h2>
       </div>
       <div className="content">
         <p>
-          ¡En gorilla Hostel puedes planear tu estadía y reservar tours con
-          nosotros! Tenemos actividades de todos tipo incluyendo tours por la
-          provincia, tours de vino y muchas más experiencias.{" "}
-          <a>Ver Actividades</a>
+          {t.actividadesDescripcion}{" "}
+          <Link href="/activities">
+            <a>{t.link}</a>
+          </Link>
         </p>
         <div className="img__content">
           <Image

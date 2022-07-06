@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useState } from "react";
 
-const Rooms = () => {
+const Rooms = ({ t }) => {
   const [privateRoom, setPrivateRoom] = useState(1);
   const [mixedRoom, setMixedRoom] = useState(1);
   const nextPrivate = () => {
@@ -17,37 +17,37 @@ const Rooms = () => {
     mixedRoom == 1 ? setMixedRoom(5) : setMixedRoom(mixedRoom - 1);
   };
   let privateText = {
-    1: "Disponible desde octubre 2022. Cama doble y 1 cucheta con calefacción central, aire acondicionado, toallas incluidas, secador de pelo, placard y desayuno incluido",
-    2: "Cama doble y 1 cucheta con calefacción central, aire acondicionado, toallas incluidas, secador de pelo, placard y desayuno incluido",
-    3: "Cuenta con 3 Cuchetas (litera, camarote), 2 camas individuales, Baño privado (separado ducha y baño), Aire Acondicionado frio/calor, Desayuno incluído, Secador de pelo, Vestidor y Lockers individuales",
+    1: `${t.privada1Descripcion}`,
+    2: `${t.privada2Descripcion}`,
+    3: `${t.privada3Descripcion}`,
   };
   let privateTitle = {
-    1: "Para 4 personas Máximo C/baño privado",
-    2: "Para 4 personas Máximo C/baño compartido",
-    3: "Habitación FEMENINA para 6 C/baño privado",
+    1: `${t.privada1Titulo}`,
+    2: `${t.privada2Titulo}`,
+    3: `${t.privada3Titulo}`,
   };
   let mixedText = {
-    1: "Camas cuchetas, Baño compartido, Calefacción central, Aire Acondicionado, Lockers individuales y Desayuno incluído.",
-    2: "Camas cuchetas, Baño compartido, Calefacción central, Aire Acondicionado, Lockers individuales y Desayuno incluído.",
-    3: "Camas cuchetas, Baño privado, Balcon, Calefacción central, Aire Acondicionado, Lockers individuales y Desayuno incluído.",
-    4: "2 cuchetas, Baño compartido, Calefacción central, Aire Acondicionado, Lockers individuales y Desayuno incluído.",
-    5: "2 cuchetas, Baño compartido, Calefacción central, Aire Acondicionado, Lockers individuales y Desayuno incluído.",
+    1: `${t.mixta1Descripcion}`,
+    2: `${t.mixta2Descripcion}`,
+    3: `${t.mixta3Descripcion}`,
+    4: `${t.mixta4Descripcion}`,
+    5: `${t.mixta5Descripcion}`,
   };
   let mixedTitle = {
-    1: "Para 8 personas Máximo C/baño compartido",
-    2: "Para 6 personas Máximo C/baño compartido",
-    3: "Para 8 personas Máximo C/baño privado",
-    4: "Para 4 personas Máximo C/baño compartido",
-    5: "Para 4 personas Máximo C/baño compartido",
+    1: `${t.mixta1Titulo}`,
+    2: `${t.mixta2Titulo}`,
+    3: `${t.mixta3Titulo}`,
+    4: `${t.mixta4Titulo}`,
+    5: `${t.mixta5Titulo}`,
   };
   return (
     <section className="rooms">
       <div className="room">
         <div className="left__room">
           <h2>
-            <span>HABITACIONES</span>
+            <span>{t.habitaciones}</span>
             <br />
-            PRIVADAS
+            {t.privadas}
           </h2>
           <div className="image__carousel__room">
             <Image
@@ -216,9 +216,9 @@ const Rooms = () => {
         </div>
         <div className="left__room">
           <h2>
-            <span>HABITACIONES</span>
+            <span>{t.habitaciones}</span>
             <br />
-            MIXTAS
+            {t.mixtas}
           </h2>
           <div className="image__carousel__room">
             <Image

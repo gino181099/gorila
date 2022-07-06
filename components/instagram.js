@@ -1,12 +1,12 @@
 import Image from "next/image";
 
-const Instagram = () => {
+const Instagram = ({ t }) => {
   return (
     <section className="instagram">
       <h2>
         <span>INSTAGRAM</span>
         <br />
-        SÍGUENOS
+        {t.siguenos}
       </h2>
       <a
         href="https://www.instagram.com/gorillahostel/"

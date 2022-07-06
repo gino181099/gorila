@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import useObserver from "./useObserver";
 
-const Reserve = () => {
+const Reserve = ({ t }) => {
   const [observer, setElements, entries] = useObserver({
     threshold: 0.5,
     root: null,
@@ -52,19 +52,18 @@ const Reserve = () => {
     <div className="reserve">
       <div className="title__reserve reserve__animation">
         <h2>
-          Reserva Ahora! <br />
+          {t.reservarAhora} <br />
         </h2>
         <p>
-          En caso de viajar con un grupo de varias personas, puedes contactarte
-          directamente{" "}
+          {t.reservarGrupo1}{" "}
           <a
             href="https://wa.me/+5492616806358"
             target="_blank"
             rel="noreferrer"
           >
-            por aquí
+            {t.reservarGrupo2}
           </a>
-          , ofrecemos descuentos.
+          {t.reservarGrupo3}
         </p>
       </div>
 
@@ -74,7 +73,7 @@ const Reserve = () => {
           htmlFor="widget_date_3816"
           title="Llegada"
         >
-          Llegada
+          {t.llegada}
         </label>
         <input
           type="date"
@@ -89,7 +88,7 @@ const Reserve = () => {
           htmlFor="widget_date_to4465"
           title="Salida"
         >
-          Salida
+          {t.salida}
         </label>
         <input
           type="date"
@@ -105,7 +104,7 @@ const Reserve = () => {
           href={`https://hotels.cloudbeds.com/es/reservation/vrb2dl?ga_sess_id=1641116198.1656893645#checkin=${checkIn}&amp;checkout=${checkOut}`}
           rel="noreferrer"
         >
-          Ir
+          {t.ir}
         </a>
       </div>
 
@@ -169,7 +168,7 @@ const Reserve = () => {
         }
         .dates_group a {
           padding: 15px 25px;
-          border-radius: 50%;
+          border-radius: 50px;
           background: #45add9;
           margin: 0 5px;
         }

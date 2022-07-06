@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Slider from "./slider";
 
-export default function Heading() {
+export default function Heading({ t }) {
   return (
     <section>
       <Slider />
@@ -25,7 +25,7 @@ export default function Heading() {
           <div className="background__about"></div>
 
           <a className="about__content" href="google.com">
-            Quienes somos
+            {t.inicio.botonEncabezado}
           </a>
         </div>
         <div className="social__buttons">

@@ -1,8 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import Selector from "./selector";
 
-const Menu = () => {
+const Menu = ({ t }) => {
   const [show, setShow] = useState(false);
 
   const controlNavbar = () => {
@@ -57,26 +58,29 @@ const Menu = () => {
         </div>
         <ul className="elements">
           <li>
-            <a className="reserve">Reservar</a>
+            <Selector />
+          </li>
+          <li>
+            <a className="reserve">{t.reservar}</a>
           </li>
           <li>
             <Link href="/">
-              <a>Inicio</a>
+              <a>{t.inicio}</a>
             </Link>
           </li>
           <li>
             <Link href="/activities">
-              <a>Actividades</a>
+              <a>{t.actividades}</a>
             </Link>
           </li>
           <li>
-            <a>Habitaciones</a>
+            <a>{t.habitaciones}</a>
           </li>
           <li>
             <a>Blog</a>
           </li>
           <li>
-            <a>Contacto</a>
+            <a>{t.contacto}</a>
           </li>
         </ul>
       </div>

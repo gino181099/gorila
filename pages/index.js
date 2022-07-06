@@ -8,10 +8,23 @@ import Heading from "../components/home/heading";
 import Instagram from "../components/instagram";
 import Reserve from "../components/reserve";
 import Rooms from "../components/rooms";
+import { useRouter } from "next/router";
+import español from "../traducciones/español";
+import ingles from "../traducciones/ingles";
+import frances from "../traducciones/frances";
 
 // import styles from "../styles/Home.module.css";
 
 export default function Home() {
+  const { locale } = useRouter();
+  const t =
+    locale === "en"
+      ? ingles
+      : locale === "es"
+      ? español
+      : locale === "fr"
+      ? frances
+      : ingles;
   return (
     <main>
       <Head>
@@ -37,13 +50,13 @@ Amplias áreas comunes, con jardín, piscina, metegol y ping pong. Bar ,Wifi gra
         ></meta>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <Heading />
-      <Reserve />
-      <About />
-      <Rooms />
-      <Activities />
-      <Instagram />
-      <Arrive />
+      <Heading t={t} />
+      <Reserve t={t.inicio} />
+      <About t={t.inicio} />
+      <Rooms t={t.inicio} />
+      <Activities t={t.inicio} />
+      <Instagram t={t.inicio} />
+      <Arrive t={t.inicio} />
     </main>
   );
 }
